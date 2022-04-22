@@ -1,6 +1,11 @@
+import { BrowserRouter as Router } from 'react-router-dom'
+import Routes from './components/Routes'
+import { Props } from './types'
 
-export default function App() {
+export default function App(props: Props) {
   return (
-    <h1>Create React App</h1>
+    <Router>
+      <Routes {...props} />
+    </Router>
   )
 }
