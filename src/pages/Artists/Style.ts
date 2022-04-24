@@ -2,13 +2,17 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        width: '100%',
         height: 'auto',
-        minHeight: 300,
-        marginBottom: '3%',
         display: 'flex',
         flexDirection: 'column',
         margin: '0 auto',
+        width: '80%',
+        [theme.breakpoints.down(1100)]: {
+            width: '90%',
+        },
+        [theme.breakpoints.down(769)]: {
+            width: '100%',
+        },
     },
     searchbar: {
         display: 'flex',
@@ -17,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between'
     },
     button: {
-        backgroundColor: 'gray',
+        backgroundColor: '#344450',
         color: '#FFFFFF',
         width: '19%',
         padding: 8,
@@ -25,6 +29,20 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: '#F5B750',
         },
+        [theme.breakpoints.down(769)]: {
+            height: 30,
+            fontSize: 12,
+        }
+    },
+    paginationWrapper: {
+        display: 'flex',
+        margin: theme.spacing(3, 0),
+        [theme.breakpoints.up('sm')]: {
+            justifyContent: 'flex-end',
+        },
+        [theme.breakpoints.down('xs')]: {
+            justifyContent: 'center',
+        }
     },
 }))
 
