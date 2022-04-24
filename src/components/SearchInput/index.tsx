@@ -5,8 +5,8 @@ import { Props } from '../../types'
 
 export default function SearchInput({
     placeholder,
-    title,
-    setTitle,
+    name,
+    setName,
 }: Props) {
 
     const styles = useStyles()
@@ -16,8 +16,8 @@ export default function SearchInput({
             variant='outlined'
             size='small'
             placeholder={placeholder}
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className={styles.root}
             InputProps={{
                 className: styles.multilineColor,
