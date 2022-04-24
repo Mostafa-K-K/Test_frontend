@@ -1,15 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
     root: {
         '& .MuiInput-underline:after': {
             borderColor: '#F5B750',
             borderRadius: 5
         },
         '& .MuiOutlinedInput-root': {
-            // '& fieldset': {
-            //     borderColor: 'transparent'
-            // },
             '&:hover fieldset': {
                 borderColor: '#C4C4C4'
             },
@@ -28,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
     },
     multilineColor: {
+        color: '#344450',
         fontSize: 18,
         [theme.breakpoints.down(1100)]: {
             fontSize: 16,
